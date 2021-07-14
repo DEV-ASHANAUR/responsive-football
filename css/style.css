@@ -39,12 +39,7 @@ main{
     padding: 0 15px;
     max-width: 50%;
 }
-.col-12{
-    margin-top: 207px;
-    flex: 0 0 100%;
-    padding:0 15px;
-    max-width: 100%;
-}
+
 .left-side h1{
     font-weight: 700;
     color: #fff;
@@ -62,7 +57,6 @@ main{
     border: none;
 }
 .right-side{
-    
     margin-top: 153px;
     margin-bottom: 86px;
 }
@@ -113,12 +107,12 @@ main{
 .highlight-section{
     display: flex;
     justify-content: space-between;
-    flex-wrap: wrap;
 }
 .hightlight-info{
     margin-top: 224px;
     max-width: 469px;
     min-height: 309px;
+    margin-right: 80px;
 }
 .hightlight-info h1{
     font-size: 48px;
@@ -133,6 +127,7 @@ main{
 }
 .hightlight-banner{
     margin-top: 165px;
+    margin-bottom: 158px;
 }
 .hightlight-banner img{
     max-width: 567px;
@@ -155,6 +150,7 @@ main{
     padding-left: 15px;
     padding-right: 15px;
     text-align: center;
+    margin-bottom: 63px;
 }
 .fotter-banner img{
     max-width: 483.87px;
@@ -166,7 +162,8 @@ main{
     width: 32px;
     border-radius: 50%;
     text-align: center;
-    background: #ddd;
+    background: #E7E7E8;
+    color: #969BAB;
     font-size: 16px;
     line-height: 31px;
     margin: 0 7px;
@@ -181,33 +178,11 @@ main{
 ------------------*/
 /* mobile device */
 
-/*Extra large devices (large desktops, 1200px and up)*/
-@media (max-width: 1399px){
-	
-}
-@media (min-width: 1400px) { 
-	
-}
-@media (min-width: 1200px) { 
-	
-}
-
-@media (max-width: 1199px) { 
-	
-}
-
-@media (max-width: 991px) {
-	
-}
-
 /*Medium devices (tablets, 767px and down)*/
-@media (max-width: 767px) {
-	
-}
-
-/*Small devices (landscape phones, 575px and down)*/
-@media (max-width: 575px) {
+@media only screen and (min-width:601px) and (max-width:980px) {
+	/* top section start */
 	.col-6{
+        margin-top: 112px;
         flex: 0 0 100%;
         max-width: 100%;
     }
@@ -219,11 +194,79 @@ main{
         margin: 0;
         margin-bottom: 27px;
     }
+    /* player section start */
+    .players{
+        grid-template-columns: repeat(2,1fr);
+    }
 
+    /* highlight section start */
+    .highlight-section{
+        flex-direction: column;
+    }
+    .hightlight-info h1{
+        font-size: 30px;
+        line-height: 40px;
+    }
+    .hightlight-info p{
+        font-size: 16px;
+        line-height: 28px;
+    }
+    .hightlight-info{
+        margin-top: 60px;
+    }
+    .hightlight-banner{
+        margin-top: 30px;
+        margin-bottom: 43px;
+    }
+    /* footer section start */
+    .fotter-banner img{
+        max-width: 200px;
+        width: 100%;
+        margin-bottom: 20px;
+    }
+}
+
+/*Small devices (landscape phones, 575px and down)*/
+@media only screen and (max-width:600px) {
+    /* top section start */
+	.col-6{
+        margin-top: 112px;
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+    .left-side h1{
+        font-weight: 700;
+        color: #fff;
+        font-size: 36px;
+        line-height: 50px;
+        margin: 0;
+        margin-bottom: 27px;
+    }
+    /* player section start */
     .players{
         grid-template-columns: repeat(1,1fr);
     }
 
+    /* highlight section start */
+    .highlight-section{
+        flex-direction: column;
+    }
+    .hightlight-info h1{
+        font-size: 30px;
+        line-height: 40px;
+    }
+    .hightlight-info p{
+        font-size: 16px;
+        line-height: 28px;
+    }
+    .hightlight-info{
+        margin-top: 60px;
+    }
+    .hightlight-banner{
+        margin-top: 30px;
+        margin-bottom: 43px;
+    }
+    /* footer section start */
     .fotter-banner img{
         max-width: 200px;
         width: 100%;
