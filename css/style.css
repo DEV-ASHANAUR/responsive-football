@@ -53,9 +53,15 @@ main{
     background: #E02C6D;
     padding: 10px 24px;
     text-decoration: none;
+    display: inline-block;
     font-size: 16px;
     color: #fff;
     border: none;
+    transition: transform .2s ease;
+}
+.watch-btn:hover{
+    transform: scale(1.10); 
+    box-shadow: 0 0 10px 5px rgb(0 0 0 / 15%);
 }
 .right-side{
     margin-top: 153px;
@@ -157,6 +163,47 @@ main{
     object-fit: cover;
 }
 /* highlight-section end */
+.top-match-container{
+    max-width: 1135px;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-bottom: 100px;
+}
+.top-match{
+    display: flex;
+    justify-content: space-between;
+}
+.top-match .video{
+    margin-top: 30px;
+}
+.match-info{
+ margin-left: 70px;
+}
+.match-info h1{
+    font-size: 48px;
+    margin: 0;
+    padding-top: 0;
+}
+.match-info p{
+    font-size: 16px;
+    line-height: 28px;
+    margin-bottom: 24px;
+}
+.match-info .text-color{
+    color: red;
+}
+/* sponser section start */
+.sponser-container{
+    max-width: 1135px;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-bottom: 100px;
+}
+.sponser{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
 /* footer section start */
 
 /* .footer-wrapper{
@@ -240,6 +287,25 @@ main{
         margin-top: 30px;
         margin-bottom: 43px;
     }
+    /* top matche start*/
+    .top-match{
+        flex-direction: column;
+    }
+    .top-match .video{
+        text-align: center;
+    }
+    iframe {
+        width: 100%;
+        height: auto;
+        
+    }
+    .match-info{
+        margin-left: 0;
+    }
+    .match-info h1{
+        font-size: 35px;
+        margin-top: 30px;
+    }
     /* footer section start */
     .fotter-banner img{
         max-width: 250px;
@@ -289,6 +355,29 @@ main{
     .hightlight-banner{
         margin-top: 30px;
         margin-bottom: 43px;
+    }
+    /* top matche start*/
+    .top-match{
+        flex-direction: column;
+    }
+    .top-match .video{
+        text-align: center;
+    }
+    iframe {
+        width: 100%;
+        height: auto;
+        
+    }
+    .match-info{
+        margin-left: 0;
+    }
+    .match-info h1{
+        font-size: 30px;
+        margin-top: 30px;
+    }
+    /* sponser section start */
+    .sponser{
+        flex-direction: column;
     }
     /* footer section start */
     .fotter-banner img{
