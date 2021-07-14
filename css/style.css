@@ -64,7 +64,9 @@ main{
 /* top section start */
 /* players section start */
 .container{
-    width: 1050px;
+    width: 1080px;
+    padding-left: 15px;
+    padding-right: 15px;
 }
 .players{
     display: grid;
@@ -93,7 +95,9 @@ main{
 /* players section end */
 /* highlight-section start */
 .highlight-container{
-    width: 1105px;
+    width: 1135px;
+    padding-right: 15px;
+    padding-left: 15px;
 }
 .highlight-section{
     display: flex;
@@ -151,3 +155,62 @@ main{
     font-size: 18px;
 }
 /* footer section end */
+
+/*---------------- 
+    media queries  
+------------------*/
+/* mobile device */
+
+@media only screen and (max-width:680px) {
+    .top-section{
+        background-color: #2D25A0;
+        margin-bottom: 70px;
+    }
+    .top-conatiner{
+        width: 100%;
+        padding-left: 15px;
+        padding-right: 15px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .top-wrapper{
+        display: flex;
+        /* justify-content: space-between; */
+        flex-direction: column;
+    }
+    .left-side{
+        margin-top: 112px;
+    }
+    .left-side h1{
+        font-weight: 700;
+        color: #fff;
+        font-size: 36px;
+        line-height: 50px;
+        margin: 0;
+        margin-bottom: 27px;
+        width: 278px;
+        height: 138px;
+    }
+    .watch-btn{
+        background: #E02C6D;
+        padding: 10px 24px;
+        text-decoration: none;
+        font-size: 16px;
+        color: #fff;
+        border: none;
+    }
+    .right-side{
+        
+        margin-top: 60px;
+        margin-bottom: 61px;
+    }
+    .right-side img{
+        width: 330px;
+        height: 260px;
+    }
+    .players, .highlight-section, .footer-wrapper{
+        display: none;
+    }
+
+
+}
