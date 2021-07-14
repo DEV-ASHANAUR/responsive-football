@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
 
 /* common style */
+*{box-sizing: border-box;}
 body{
     font-family: 'Poppins', sans-serif;
     margin: 0;
@@ -21,7 +22,7 @@ main{
     margin-bottom: 70px;
 }
 .top-conatiner{
-    width: 1190px;
+    max-width: 1190px;
     padding-left: 15px;
     padding-right: 15px;
     margin-left: auto;
@@ -29,10 +30,20 @@ main{
 }
 .top-wrapper{
     display: flex;
-    justify-content: space-between;
+    margin: 0 -15px;
+    flex-wrap: wrap;
 }
-.left-side{
+.col-6{
     margin-top: 207px;
+    flex: 0 0 50%;
+    padding: 0 15px;
+    max-width: 50%;
+}
+.col-12{
+    margin-top: 207px;
+    flex: 0 0 100%;
+    padding:0 15px;
+    max-width: 100%;
 }
 .left-side h1{
     font-weight: 700;
@@ -41,8 +52,6 @@ main{
     line-height: 80px;
     margin: 0;
     margin-bottom: 27px;
-    width: 485px;
-    height: 230px;
 }
 .watch-btn{
     background: #E02C6D;
@@ -58,13 +67,13 @@ main{
     margin-bottom: 86px;
 }
 .right-side img{
-    width: 556.01px;
-    height: 438px;
+    max-width: 100%;
+    height: auto;
 }
 /* top section start */
 /* players section start */
 .container{
-    width: 1080px;
+    max-width: 1080px;
     padding-left: 15px;
     padding-right: 15px;
 }
@@ -80,8 +89,10 @@ main{
     box-shadow: 0px 0px 40px rgba(0, 0, 0, 0.15);
 }
 .player .thumbnail img{
-    width: 300px;
+    max-width: 300px;
+    width: 100%;
     height: 256px;
+    object-fit: cover;
 }
 .player .player-name{
     font-weight: bold;
@@ -95,18 +106,19 @@ main{
 /* players section end */
 /* highlight-section start */
 .highlight-container{
-    width: 1135px;
+    max-width: 1135px;
     padding-right: 15px;
     padding-left: 15px;
 }
 .highlight-section{
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
 }
 .hightlight-info{
     margin-top: 224px;
-    width: 469px;
-    height: 309px;
+    max-width: 469px;
+    min-height: 309px;
 }
 .hightlight-info h1{
     font-size: 48px;
@@ -123,22 +135,30 @@ main{
     margin-top: 165px;
 }
 .hightlight-banner img{
-    width: 567px;
+    max-width: 567px;
+    width: 100%;
     height: 427px;
+    object-fit: cover;
 }
 /* highlight-section end */
 /* footer section start */
 
-.footer-wrapper{
+/* .footer-wrapper{
     margin-top: 158px;
     margin-bottom: 43px;
     display: flex;
     flex-direction: column;
     align-items: center;
+} */
+
+.footer-container{
+    padding-left: 15px;
+    padding-right: 15px;
+    text-align: center;
 }
 .fotter-banner img{
-    width: 483.87px;
-    height: 110px;
+    max-width: 483.87px;
+    width: 100%;
     margin-bottom: 20px;
 }
 .icon i {
@@ -161,23 +181,35 @@ main{
 ------------------*/
 /* mobile device */
 
-@media only screen and (max-width:680px) {
-    .top-section{
-        background-color: #2D25A0;
-        margin-bottom: 70px;
-    }
-    .top-conatiner{
-        width: initial;
-        padding-left: 15px;
-        padding-right: 15px;
-    }
-    .top-wrapper{
-        display: flex;
-        /* justify-content: space-between; */
-        flex-direction: column;
-    }
-    .left-side{
-        margin-top: 112px;
+/*Extra large devices (large desktops, 1200px and up)*/
+@media (max-width: 1399px){
+	
+}
+@media (min-width: 1400px) { 
+	
+}
+@media (min-width: 1200px) { 
+	
+}
+
+@media (max-width: 1199px) { 
+	
+}
+
+@media (max-width: 991px) {
+	
+}
+
+/*Medium devices (tablets, 767px and down)*/
+@media (max-width: 767px) {
+	
+}
+
+/*Small devices (landscape phones, 575px and down)*/
+@media (max-width: 575px) {
+	.col-6{
+        flex: 0 0 100%;
+        max-width: 100%;
     }
     .left-side h1{
         font-weight: 700;
@@ -186,29 +218,15 @@ main{
         line-height: 50px;
         margin: 0;
         margin-bottom: 27px;
-        width: 278px;
-        height: 138px;
-    }
-    .watch-btn{
-        background: #E02C6D;
-        padding: 10px 24px;
-        text-decoration: none;
-        font-size: 16px;
-        color: #fff;
-        border: none;
-    }
-    .right-side{
-        
-        margin-top: 60px;
-        margin-bottom: 61px;
-    }
-    .right-side img{
-        width: 330px;
-        height: 260px;
-    }
-    .players, .highlight-section, .footer-wrapper{
-        display: none;
     }
 
+    .players{
+        grid-template-columns: repeat(1,1fr);
+    }
 
+    .fotter-banner img{
+        max-width: 200px;
+        width: 100%;
+        margin-bottom: 20px;
+    }
 }
